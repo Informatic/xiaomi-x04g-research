@@ -93,9 +93,9 @@ user/release-keys
 	* `fastboot reboot recovery` gets us back to "No command" screen (but usual recovery key combo doesn't seem to work?)
     * Doesn't accept/boot unsigned payloads
 
-https://forum.xda-developers.com/t/mi-smart-clock-how-to-enter-recovery-mode-fastbootd.4586969/
-https://github.com/MaxCaiLC/twrp_xiaomi_lx04_device_tree
-https://forum.xda-developers.com/t/xiaomi-mi-smart-clock.4442335/
+* https://forum.xda-developers.com/t/mi-smart-clock-how-to-enter-recovery-mode-fastbootd.4586969/
+* https://github.com/MaxCaiLC/twrp_xiaomi_lx04_device_tree
+* https://forum.xda-developers.com/t/xiaomi-mi-smart-clock.4442335/
 
 ### Firmware/eMMC dump
 
@@ -123,7 +123,8 @@ images don't seem to boot for some reason.
 
 `magiskboot` and friends can be extracted from magisk apk -
 `PLATFORM/lib/libmagiskboot.so`
-https://github.com/topjohnwu/Magisk/blob/master/scripts/boot_patch.sh
+
+* https://github.com/topjohnwu/Magisk/blob/master/scripts/boot_patch.sh
 
 `init.adb.rc` contains everything needed to enable unauthenticated adb - insert
 this into `overlay.d` directory in `boot.img` (probably - by patching
