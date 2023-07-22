@@ -40,7 +40,11 @@ storage contents to stock.
 1. Dump all partitions using mtkclient: `sudo python mtkclient/mtk rl dump`
    **Back this up...**
 2. Unlock bootloader using mtkclient: `sudo python mtkclient/mtk da seccfg unlock`
-3. Patch up boot.img: `bash ./magisk-install.sh dump/boot.img`
+3. Patch up boot.img: `bash ./magisk-install.sh dump/boot.img` (**note:** this
+   downloads, verifies and extracts Magisk v26.1 APK and runs some binaries off its
+   contents on your system - considering you are running a random script off
+   some rando's github repo, you are probably fine with it, but I just want it to
+   be really clear)
 4. Reflash patched boot.img: `python mtkclient/mtk w boot /tmp/extract/new-boot.img`
 5. Power cycle - device should expose an unauthorized ADB shell and expose a remote
    shell on 1337 TCP port accessible on local network (this can be disabled by
