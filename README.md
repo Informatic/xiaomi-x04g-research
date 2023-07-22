@@ -5,6 +5,8 @@ running Android Things (10). Running stock firmware this device is fairly
 limited only supporting basic alarm clock and Google Assistant features without
 any debugging/extensibility available.
 
+![Photo of XIaomi X04G Mi Smart Clock standing on a desk](xiaomi-x04g.jpg)
+
 Devices' bootloader can be unlocked using
 [`mtkclient`](https://github.com/bkerler/mtkclient) tool and a `boot.img`
 patched with slightly customized [Magisk
