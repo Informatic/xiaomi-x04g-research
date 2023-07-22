@@ -1,0 +1,29 @@
+on boot
+    # Disable selinux (not 100% sure this is actually needed at this point...)
+    exec u:r:magisk:s0 -- /system/bin/setenforce 0
+
+    # Disable adb authentication
+    exec u:r:magisk:s0 -- /sbin/resetprop ro.secure 0
+    exec u:r:magisk:s0 -- /sbin/resetprop ro.adb.secure 0
+    exec u:r:magisk:s0 -- /sbin/resetprop ro.debuggable 1
+
+    setprop persist.sys.usb.config adb
+    setprop sys.usb.config adb
+
+    stop adbd
+    start adbd
+
+    start rootshell
+
+    # You can uncomment this to enable ADB over TCP
+    # setprop service.adb.tcp.port 5555
+
+# This is required for sys.usb.config change to properly apply...
+on property:sys.usb.config=adb && property:sys.usb.configfs=1
+    restart adbd
+
+service rootshell ${MAGISKTMP}/rootshell.sh
+    class core
+    user root
+    oneshot
+    seclabel u:r:magisk:s0
