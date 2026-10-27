@@ -1,0 +1,6 @@
+/build/
+/__pycache__/
+/tests/__pycache__/
+/tests/host_classes/
+/tests/host_bin/
+*.pyc

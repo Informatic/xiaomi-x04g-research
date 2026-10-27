@@ -50,6 +50,15 @@ storage contents to stock.
    shell on 1337 TCP port accessible on local network (this can be disabled by
    modifying `init.adb.rc`).
 
+## Stock launcher carousel example
+
+The [stock carousel demo](examples/stock-carousel-demo/) adds one counter page
+through a firmware-pinned Zygisk module without replacing the OEM APK. It assumes
+working root, USB ADB and Zygisk; see the [English](examples/stock-carousel-demo/README.md)
+or [Spanish](examples/stock-carousel-demo/README.es.md) build, activation and
+disabling guide. The reduced demo has a separate host validation scope and has not
+itself been accepted on a physical clock.
+
 ## Hardware
 
 * Mediatek MT8167A

@@ -1,0 +1,9 @@
+{
+  "zygisk.hpp": {
+    "url": "https://github.com/topjohnwu/zygisk-module-sample/blob/7bb941ac8edfcffd1d23761e401c45ca95409dc1/module/jni/zygisk.hpp",
+    "sha256": "fc6523882c0f8659b4fcd1e04ffb07d3a948090e5a8c08817af6e2b506a078d0",
+    "api_version": 4,
+    "license": "Original 0BSD permission notice retained in file",
+    "modified": false
+  }
+}
